@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>about page</title>
+    <link href="css/about.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="row">
+            <div class="img-section">
+                <img src="img/travel2.png" alt="image">
+                </div>
+            <div class="content">
+                <h1>About Us </h1>
+         
+     <p>This website helps you to find your destination and many things about that place .like many routes to that place and what type of transportation is available for that place</p> 
+    
+    </div>
+        </div>
+    </div>
+    
+  <title>Simple Chatbot</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .chatbox { width: 300px; height: 400px; border: 1px solid #ccc; padding: 10px; overflow-y: scroll; margin: auto; margin-top: 50px; }
+    .user, .bot { margin: 5px 0; }
+    .user { text-align: right; color: blue; }
+    .bot { text-align: left; color: green; }
+    input[type="text"] { width: 80%; padding: 5px; }
+    button { padding: 5px 10px; }
+  </style>
+</head>
+<body>
+
+<div class="chatbox" id="chatbox"></div>
+
+<div style="text-align:center; margin-top:10px;">
+  <input type="text" id="userInput" placeholder="Type your message" />
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+  function sendMessage() {
+    const input = document.getElementById("userInput");
+    const msg = input.value.trim();
+    if (!msg) return;
+
+    const chatbox = document.getElementById("chatbox");
+    chatbox.innerHTML += `<div class="user">You: ${msg}</div>`;
+
+    let response = getBotResponse(msg.toLowerCase());
+    chatbox.innerHTML += `<div class="bot">Bot: ${response}</div>`;
+
+    input.value = "";
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+
+  function getBotResponse(input) {
+    if (input.includes("hello")) return "Hi there!";
+    if (input.includes("weather updates")) return "Pleasant weather!";
+    if (input.includes("give distance from isbt to buddha temple")) return "not too much just 3 km!";
+    if (input.includes("places")) return "Tapkeshwar,Buddha Temple,George Everest!";
+    if (input.includes("how are you")) return "I'm Doing fine, what about you!";
+    if (input.includes("Give me some place to visit in dehradun"))    return "Tapkeshwar,Buddha Temple,George Everest!";  
+    return "Sorry, I didn't understand that.";
+  }
+  
+</script>
+
+</body>
+</html>
+
+    

@@ -1,0 +1,43 @@
+.para1 {
+    text-align: center;
+    text-align: var(attraction);
+	color: red;
+	font-size: 50px;
+	font-style: oblique;
+}
+.para2 {
+    text-align: left;
+    color:blue;
+    font-size: 40px;
+	font-style: oblique;
+}
+.para3 {
+    text-align: left;
+    color:green;
+    font-size: 40px;
+	font-style: oblique;
+}
+.para4 {
+    text-align: left;
+    color:darkmagenta;
+    font-size: 40px;
+	font-style: oblique;
+}
+.para5 {
+    text-align: center;
+    color:red;
+}
+.para6 {
+    color: darkcyan;
+    font-size: 30px;
+	font-style: oblique;
+}
+.para7 {
+    color:mediumblue;
+    font-size: 25px;
+	font-style: oblique;
+}
+p {
+    text-align: left;
+    font-size: 20px;
+}
